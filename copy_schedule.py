@@ -83,8 +83,6 @@ class OutlookCalendar:
             )
             events.append(event)
 
-            # print(event)
-
         return events
 
 
@@ -119,12 +117,6 @@ class GoogleCalendar:
         self.service = service
 
     def get_events(self, start_date, end_date):
-        # start_date = datetime.datetime.combine(
-        #    datetime.datetime(2021, 1, 22), datetime.time()
-        # )
-        # end_date = datetime.datetime.combine(
-        #    datetime.datetime(2021, 1, 30), datetime.time()
-        # )
         start_date = start_date.isoformat() + "Z"
         end_date = end_date.isoformat() + "Z"
 
@@ -159,8 +151,6 @@ class GoogleCalendar:
                 gglev["id"],
             )
             events.append(event)
-
-            # print(event)
 
         return events
 
